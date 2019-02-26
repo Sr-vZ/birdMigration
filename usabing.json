@@ -1,0 +1,117 @@
+{
+    "489": {
+        "bitmapImage": null,
+        "vectorImage": {
+            "records": [{
+                "cX": 0,
+                "cY": 0,
+                "rX": 7,
+                "rY": 7,
+                "lockWHRatio": true,
+                "colorValueId": 214,
+                "recordType": "FilledEllipse",
+                "scalePaletteKeyId": 607
+            }]
+        }
+    },
+    "492": {
+        "bitmapImage": null,
+        "vectorImage": {
+            "records": [{
+                "cX": 11,
+                "cY": 11,
+                "rX": 8.5,
+                "rY": 8.5,
+                "lockWHRatio": true,
+                "colorValueId": 219,
+                "recordType": "FilledEllipse",
+                "scalePaletteKeyId": 619
+            }, {
+                "geometryString": "M11,1.5c-5.247,0-9.5,4.253-9.5,9.5s4.253,9.5,9.5,9.5s9.5-4.253,9.5-9.5S16.247,1.5,11,1.5z M11,19.5  c-4.694,0-8.5-3.806-8.5-8.5S6.306,2.5,11,2.5s8.5,3.806,8.5,8.5S15.694,19.5,11,19.5z",
+                "fillValueId": 220,
+                "strokeValueId": 1,
+                "strokeWidth": 1,
+                "recordType": "Path",
+                "strokeScalePaletteKeyId": -1,
+                "scalePaletteKeyId": 621
+            }]
+        }
+    },
+    "665": {
+        "bitmapImage": null,
+        "vectorImage": {
+            "records": [{
+                "cX": 0,
+                "cY": 0,
+                "rX": 10,
+                "rY": 10,
+                "lockWHRatio": true,
+                "colorValueId": 367,
+                "recordType": "FilledEllipse",
+                "scalePaletteKeyId": 725
+            }, {
+                "cX": 0,
+                "cY": 0,
+                "rX": 10,
+                "rY": 10,
+                "lockWHRatio": true,
+                "lineStyle": {
+                    "colorValueId": 368,
+                    "compoundArrayList": null,
+                    "dashesList": null,
+                    "strokeWidth": 1
+                },
+                "recordType": "Ellipse",
+                "strokeScalePaletteKeyId": 727,
+                "scalePaletteKeyId": 725
+            }]
+        }
+    },
+    "735": {
+        "bitmapImage": null,
+        "vectorImage": {
+            "records": [{
+                "geometryString": "M-1.7,8h-10.6C-13.8,8-15,6.4-15,4.5v-13c0-1.9,1.2-3.5,2.7-3.5   h24.6c1.5,0,2.7,1.6,2.7,3.5v13C15,6.4,13.8,8,12.3,8H1.7L0,11.4L-1.7,8z",
+                "fillValueId": 462,
+                "strokeValueId": 463,
+                "strokeWidth": 1,
+                "recordType": "Path",
+                "strokeScalePaletteKeyId": 621,
+                "scalePaletteKeyId": 619
+            }, {
+                "leftTop": {
+                    "x": -9.5111,
+                    "y": -8.063181
+                },
+                "rightBottom": {
+                    "x": 10.51038,
+                    "y": 5.343069
+                },
+                "textStyle": {
+                    "alphaFloor": 175,
+                    "fontFamilyId": 386,
+                    "fontSize": 9,
+                    "fontStyle": 0,
+                    "colorValueId": 464,
+                    "glowColorValueId": 7,
+                    "outlineColorValueId": 7,
+                    "glowSize": 3,
+                    "heightMatchMode": 0,
+                    "heightMatchPixels": 0,
+                    "minimumFontSize": 10,
+                    "outlineWidth": 0,
+                    "secondGlowSize": 9,
+                    "textDrawSettings": 0
+                },
+                "horizontalAlignment": 0,
+                "horizontalAutoScaling": 1,
+                "stringSourceId": 803,
+                "stringSourceType": 1,
+                "verticalAlignment": 0,
+                "verticalAutoScaling": 1,
+                "recordType": "Text",
+                "scalePaletteKeyId": 802
+            }]
+        }
+    }
+}
