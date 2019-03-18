@@ -10,10 +10,11 @@ request(birdUrl, function (error, response, body) {
   // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   // console.log('body:', body); // Print the HTML for the Google homepage.
   temp = JSON.parse(body)
-  birdData=temp;
+  birdData = temp;
   var source = new proj4.Proj("EPSG:3857");
   var dest = new proj4.Proj("EPSG:4326");
-  fs.writeFileSync('birdData.json',JSON.stringify(temp,null,2))
+
+  fs.writeFileSync('birdData.json', JSON.stringify(temp, null, 2))
   for (i = 0; i < birdData.features.length; i++) {
     // for (i = 0; i < 2; i++) {
     for (j = 0; j < birdData.features[i].geometry.coordinates[0][0].length; j++) {
@@ -25,7 +26,24 @@ request(birdUrl, function (error, response, body) {
       // console.log(temp.features[i].geometry.coordinates[0][0][j])
     }
   }
-  fs.writeFileSync('birdDataConverted.json',JSON.stringify(birdData,null,2))
+  fs.writeFileSync('birdDataConverted.json', JSON.stringify(birdData, null, 2))
+  //point data
+  for (i = 0; i < birdData.features.length; i++) {
+    // for (i = 0; i < 2; i++) {
+    // for (j = 0; j < birdData.features[i].geometry.coordinates[0][0].length; j++) {
+    birdData.features[i].geometry.type = 'Point'
+    // birdData.features[i].geometry.coordinates
+    point = birdData.features[i].geometry.coordinates[0][0][0]
+    birdData.features[i].geometry.coordinates = point
+    // birdData.features[i].geometry.coordinates = proj4(
+    //   source,
+    //   dest,
+    //   temp.features[i].geometry.coordinates[0][0][0]
+    // );
+    // console.log(temp.features[i].geometry.coordinates[0][0][j])
+    // }
+  }
+  fs.writeFileSync('birdDataPoints.json', JSON.stringify(birdData, null, 2))
 });
 
 mapUrl = 'https://unpkg.com/us-atlas@1/us/10m.json'
