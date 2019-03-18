@@ -9,6 +9,17 @@
         .leaflet-container {
             background-color: #c5e8ff;
         }
+
+        .path-anim {
+            stroke-dasharray: 100;
+            animation: dash 5s linear;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 1000;
+            }
+        }
     </style>
 </head>
 
@@ -17,6 +28,7 @@
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.AnimatedMarker/1.0.0/AnimatedMarker.min.js"></script>
     <script src="mapping.js"></script>
 </body>
 
