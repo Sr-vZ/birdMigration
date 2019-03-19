@@ -3,13 +3,14 @@ birdData = []
 
 var svg = d3.select("svg");
 c = []
+drawMap();
 $.getJSON('wood_duck.json', function (data) {
     w = 960;
     h = 600;
 
     birdData = data;
     temp = birdData;
-    drawMap();
+    
 
 
     var projection = d3.geoAlbersUsa();
@@ -69,12 +70,13 @@ $.getJSON('wood_duck.json', function (data) {
         .append("path")
         .attr('d', pathData)
         .attr("class", "path-anim")
-        .attr("stroke", "black")
+        .attr("stroke", "grey")
+        .attr("stroke-dasharray",function(d){return Math.random()*100})
         .attr("stroke-width", .7)
         
         // .attr("fill", "none");
     
-    c = drawCircle()
+    // c = drawCircle()
     // drawPaths()
     function drawPaths() {
         svg.selectAll("path")
@@ -458,13 +460,14 @@ function drawMap() {
 
         var svg = d3.select("svg").call(zoom);
 
-        svg.append("path")
-            .attr("stroke-width", 0.5)
-            .attr("d", path(topojson.mesh(us, us.objects.states, function (a, b) {
-                return a !== b;
-            })));
+        // svg.append("path")
+        //     .attr("stroke-width", 0.5)
+        //     .attr("d", path(topojson.mesh(us, us.objects.states, function (a, b) {
+        //         return a !== b;
+        //     })));
 
-        svg.append("path").attr("d", path(topojson.feature(us, us.objects.nation)));
+        svg.append("path").attr("d", path(topojson.feature(us, us.objects.nation))).attr("class","map-path");
+        
         const g = svg.append("g");
 
         function zoomed() {

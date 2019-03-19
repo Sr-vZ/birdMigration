@@ -1,1 +1,4 @@
 https://github.com/danwild/wind-js-leaflet
+
+particle effects:
+http://thecodeplayer.com/walkthrough/make-a-particle-system-in-html5-canvas
