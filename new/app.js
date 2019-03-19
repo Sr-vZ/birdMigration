@@ -60,6 +60,7 @@ $.getJSON('wood_duck_10.json', function (data) {
 
 
     var lineGenerator = d3.line()
+        // .curve(d3.curveBasisClosed);
         .curve(d3.curveBasisClosed);
     var pathData = lineGenerator(projLineCoords);
 
@@ -69,7 +70,7 @@ $.getJSON('wood_duck_10.json', function (data) {
         .attr('d', pathData)
         .attr("class", "path-anim")
         .attr("stroke", "black")
-        .attr("stroke-width", .7)
+        .attr("stroke-width", .5)
         
         // .attr("fill", "none");
     
@@ -80,7 +81,7 @@ $.getJSON('wood_duck_10.json', function (data) {
             .data(lineCoords).enter()
             .append("path")
             .attr("d", d3.line()
-                .curve(d3.curveBasisClosed))
+                .curve(d3.curveBasis))
             .attr("stroke", "blue")
             .attr("stroke-width", 1)
             .attr("fill", "none");
@@ -459,9 +460,9 @@ function drawMap() {
 
         svg.append("path")
             .attr("stroke-width", 0.5)
-            .attr("d", path(topojson.mesh(us, us.objects.states, function (a, b) {
-                return a !== b;
-            })));
+            // .attr("d", path(topojson.mesh(us, us.objects.states, function (a, b) {
+            //     return a !== b;
+            // })));
 
         svg.append("path").attr("d", path(topojson.feature(us, us.objects.nation)));
         const g = svg.append("g");
