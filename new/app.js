@@ -1,7 +1,7 @@
 birdData = []
 // var projection = d3.geoAlbersUsa();
 var svg = d3.select("svg");
-$.getJSON('wood_duck.json', function (data) {
+$.getJSON('wood_duck_10.json', function (data) {
     w = 960;
     h = 600;
 
