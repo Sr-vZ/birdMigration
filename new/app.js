@@ -71,7 +71,7 @@ $.getJSON('wood_duck.json', function (data) {
         .attr('d', pathData)
         .attr("class", "path-anim")
         .attr("stroke", "grey")
-        .attr("stroke-dasharray",function(d){return Math.random()*100})
+        .attr("stroke-dasharray",100)
         .attr("stroke-width", .7)
         
         // .attr("fill", "none");
